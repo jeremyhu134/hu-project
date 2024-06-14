@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% block content%}
+        <main>
+            <style></style>
+            <section class="hero">
+                <h1>{{ current_user.username}}'s 胡Chat Profile</h1>
+            </section>
+            <section class="profile_attributes">
+            <ul>
+                  <li>USERNAME : {{ current_user.username}}</li>
+                  <li>EMAIL : {{ current_user.email}}</li>
+                  <li>PROFILE IMAGE LINK : {{ current_user.profile_picture}}</li>
+            </ul>
+            </section>
+            <form action="{{ url_for('profile')}}" method="post">
+                {{template_form.hidden_tag()}}
+                <table class="authentication_table">
+                    <tr>
+                        {{template_form.profile_picture.label}}
+                        {{template_form.profile_picture()}}
+                    </tr>
+                    <tr>
+                        {{template_form.submit()}}
+                    </tr>
+                </table>
+            </form>
+            <form action="{{ url_for('logout') }}" method="post">
+                <button class='log_out' type="submit">Logout</button>
+            </form>
+        </main>
+
+     {% endblock %}

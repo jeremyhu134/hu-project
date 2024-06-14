@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <main>
+      <section class="hero">
+	      <h1>Create an account</h1>
+        <p>Sign up to begin connecting </p>
+      </section>
+      <form action="{{url_for('sign_up')}}" method="POST">
+          {{template_form.hidden_tag()}}
+        <table class="authentication_table">
+          <tbody>
+            <tr>
+              <td>
+                {{template_form.username.label}}
+                {{template_form.username()}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{template_form.email.label}}
+                {{template_form.email()}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{template_form.password.label}}
+                {{template_form.password()}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{template_form.submit()}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </main>
+{% endblock %}

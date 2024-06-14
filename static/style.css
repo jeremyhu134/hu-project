@@ -1,0 +1,231 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    background-color: #fff;
+    padding: 0 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    background-color: #f1f1f1; /* Slight hint of gray */
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation_li {
+    display: inline-block;
+}
+
+.navigation_a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+    padding: 15px 20px;
+}
+
+.navigation_a:hover {
+    opacity: 1;
+}
+
+
+.alert {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text color */
+    padding: 10px; /* Add padding for spacing */
+    border: 1px solid #c3e6cb; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-bottom: 20px; /* Add margin to separate from other content */
+}
+
+
+
+
+.profile_a {
+    text-decoration: none;
+}
+
+.profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.hero {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin:
+}
+
+
+
+
+form {
+    margin-top: 20px;
+}
+
+/* Style form elements */
+.authentication_table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.profile_attributes {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile_attributes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile_attributes li {
+    margin-bottom: 15px;
+}
+
+.log_out {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.log_out:hover {
+    background-color: #c82333;
+}
+
+
+.chat-container {
+    background-color: #f0f0f0; /* Background color for the chat container */
+    border-top: 1px solid #ccc; /* Top border */
+    border-bottom: 2px solid #ccc; /* Bottom border */
+    margin-bottom: 30px; /* Margin bottom to separate messages */
+    overflow: hidden;
+}
+
+.message {
+    margin: 20px; /* Margin bottom to separate messages */
+    overflow: hidden;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px; /* Add margin to separate avatar from message content */
+}
+
+.username {
+    font-weight: bold;
+    float: left;
+    margin-right: 10px; /* Add margin to separate username from message content */
+}
+
+.message-content {
+    background-color: #fff; /* Background color for the message content */
+    padding: 15px; /* Padding for the message content */
+    border-radius: 8px; /* Rounded corners */
+    display: block;
+    width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-left: 60px; /* Adjusted margin to accommodate avatar and username */
+    clear: both; /* Clear floating elements */
+    word-wrap: break-word; /* Ensure long words break onto the next line */
+    overflow-wrap: break-word; /* For better browser compatibility */
+}
+
+
+.message-content p {
+    margin: 0; /* Reset margin for paragraphs inside message content */
+}
+
+
+.message_form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.fullWidthDiv{
+    width : 100%;
+    margin : 0;
+}
+
+.my-textarea {
+    flex: 1;
+    width: 100%;
+    min-height: 50px; /* Set a minimum height */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none; /* Disable manual resizing */
+    box-sizing: border-box;
+    margin: 0;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}

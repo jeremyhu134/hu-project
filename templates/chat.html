@@ -1,0 +1,53 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <script defer>
+        window.onload = function() {
+            window.scrollTo(0, document.body.scrollHeight);
+            var textarea = document.getElementById("myTextArea");
+            textarea.value = "";
+        };
+        document.addEventListener("DOMContentLoaded", function() {
+            var textarea = document.getElementById("myTextArea");
+            textarea.addEventListener("input", function() {
+                this.style.height = "auto";
+                this.style.height = (this.scrollHeight) + "px";
+            });
+        });
+    </script>
+
+    <main>
+        <br><br><br>
+        {% for one_message in all_messages %}
+        <div class="chat-container">
+            <div class="message">
+                <img src={{one_message.owner.profile_picture}} alt="?PFP?" class="avatar">
+                <p class="username">{{one_message.owner.username}}</p>
+                <div class="message-content">
+                    <p>{{one_message.text}}</p>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+        <div class="fullWidthDiv">
+            <form class="message_form" action="{{url_for('chat')}}" method="POST">
+              {{template_form.hidden_tag()}}
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    {{template_form.message()}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{template_form.submit()}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </form>
+        </div>
+    </main>
+{% endblock %}
